@@ -3,11 +3,34 @@
 {% block content_jesus %}
 
     <div class="container">
+        
+        <!-- HEADER -->
         <header>
             <div class="flex mb-md">
                 <h3>NAVBAR</h3>
             </div>
         </header>
+        
+        <!-- Title & Actions Section -->
+        {% if title_action_section == 1 %}
+        <div class="p-sm shadow-dark border-radius-sm mb-md">
+            {% if page_title %}
+            <h1>{{ page_title }}</h1>
+            {% else %}
+            <p class="text-danger">Please set a page_title in the view context; or set title_action_section to False</p>
+            {% endif %}
+            
+            {% if action_menu %}
+                <div class="flex mt-xs">
+                    {% for link in action_menu %}
+                    <a class="btn-mini btn-dark" href="{{ link.url }}">{{ link.name }}</a>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            
+            
+        </div>
+        {% endif %}
         
         {% block content_default %}
         

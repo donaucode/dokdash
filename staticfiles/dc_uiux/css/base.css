@@ -59,20 +59,22 @@ a:hover {
 
 .container { max-width: 1200px; margin-left: auto; margin-right: auto; padding-right: var(--space-sm); padding-left: var(--space-sm); }
 
+
 .btn {
-    padding: var(--space-xs);
     border-radius: var(--space-2xs);
-    cursor: pointer;
+    padding: var(--space-xs);
     font-weight: var(--fw-600);
+    cursor: pointer;
 }
 
 .btn-mini {
-    padding: var(--space-2xs);
     border-radius: var(--space-2xs);
+    padding: var(--space-2xs);
+    font-size: var(--fs-xs);
+    font-weight: var(--fw-600);
     cursor: pointer;
-    font-weight: var(--fw-400);
 }
-    
+
 .btn-primary {
     color: var(--clr-light);
     background-color: var(--clr-primary);
@@ -91,5 +93,4 @@ a:hover {
     border: 1px solid var(--clr-danger);
 }
 
-.btn:hover, .btn-mini:hover { margin-top: -1px; }
-.btn-primary > a, .btn-dark > a, .btn-danger > a { color: var(--clr-light); text-decoration: none; }
+.btn:hover, .btn-mini:hover { opacity: 0.8; text-decoration: none; color: var(--clr-light); }

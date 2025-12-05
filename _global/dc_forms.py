@@ -158,7 +158,17 @@ def dc_form_fields_select2_model_choice_multiple(label, queryset, help_text="", 
         widget=Select2MultipleWidget(attrs={"class": "field"}),
         **kwargs
     )
-    
+  
+def dc_form_fields_select2_choice(label, choices, help_text="", required=True, **kwargs):
+    return forms.ChoiceField(
+        label=label,
+        help_text=help_text,
+        choices=choices,
+        required=required,
+        widget=Select2Widget(attrs={"class": "select2-field"}),
+        **kwargs
+    )
+  
 def dc_form_fields_select2_choice_multiple(label, choices, help_text="", required=True, **kwargs):
     """
     Factory for a MultipleChoiceField that uses a Select2Multiple widget.

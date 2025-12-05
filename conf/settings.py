@@ -165,17 +165,21 @@ STATICFILES_DIRS = [os.path.join(BASE_DIR, 'staticfiles'),]
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
-# SELECT 2
 CACHES = {
-    # … default cache config and others
+    "default": {
+        "BACKEND": "django_redis.cache.RedisCache",
+        "LOCATION": "redis://127.0.0.1:6379/1",  # Using db 1 for default
+        "OPTIONS": {
+            "CLIENT_CLASS": "django_redis.client.DefaultClient",
+        }
+    },
     "select2": {
         "BACKEND": "django_redis.cache.RedisCache",
-        "LOCATION": "redis://127.0.0.1:6379/2",
+        "LOCATION": "redis://127.0.0.1:6379/2",  # Using db 2 for select2
         "OPTIONS": {
             "CLIENT_CLASS": "django_redis.client.DefaultClient",
         }
     }
 }
 
-# Tell select2 which cache configuration to use:
 SELECT2_CACHE_BACKEND = "select2"

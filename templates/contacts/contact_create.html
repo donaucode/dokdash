@@ -1,0 +1,46 @@
+{% extends 'global/base_default.html' %}
+
+{% block content_default %}
+<form method="POST">
+    {% csrf_token %}
+    
+    {% if next_url %}
+    <input type="hidden" name="next_url" value={{ next_url }}>
+    {% endif %}
+
+    {# Display non-field errors at the top of the form #}
+    {% if form.non_field_errors %}
+        <div class="form-errors">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+    
+    <div class="field-group">
+        {% with form.name as field %}
+        <div class="field-container {% if field.errors %}has-error{% endif %}">
+            {{ field.label_tag }}
+            {{ field }}
+            {{ field.errors }}
+            <p class="help-text">{{ field.help_text }}</p>
+        </div>
+        {% endwith %}
+    </div>
+    
+    <div class="field-group">
+        {% with form.description as field %}
+        <div class="field-container {% if field.errors %}has-error{% endif %}">
+            {{ field.label_tag }}
+            {{ field }}
+            {{ field.errors }}
+            <p class="help-text">{{ field.help_text }}</p>
+        </div>
+        {% endwith %}
+    </div>
+    
+    <div class="flex gap-xs">
+        <button type="submit" class="btn btn-dark">Speichern</button>
+        <button type="button" onclick="history.back()" class="btn btn-dark-outline">Abbrechen</button>
+    </div>
+    
+</form>
+{% endblock %}

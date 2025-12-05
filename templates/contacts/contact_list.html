@@ -1,0 +1,28 @@
+{% extends 'global/base_default.html' %}
+
+{% block content_default %}
+
+{% if obj_list %}
+<table>
+    <thead>
+        <tr>
+            <th>Name</th>
+            <th>Description</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for obj in obj_list %}
+        <tr>
+            <td><a href="{% url 'contact_read' obj.pk %}">{{ obj.name }}</a></td>
+            <td>{% if obj.description %}{{ obj.desciption }}{% else %}---{% endif %}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+    
+</table>
+{% else %}
+<p>You have no contacts</p>
+{% endif %}
+
+
+{% endblock %}

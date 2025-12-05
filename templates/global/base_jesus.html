@@ -4,7 +4,12 @@
 <html lang="en">
     <head>
         <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>{% block title %}Dokdash{% endblock %}</title>
+        
+        {{ form.media.css }}
+    
+    
     
         <!-- CUSTOM STYLING -->
         <link rel="stylesheet" href="{% static 'dc_uiux/css/base.css' %}">
@@ -25,6 +30,9 @@
 
             {% endblock %}
         </main>
+        
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        {{ form.media.js }}
         
         <!-- EXTRA JS IF NEEDED IN CHILD TEMPLATE -->
         {% block extra_js %}{% endblock %}

@@ -1,0 +1,28 @@
+{% extends 'global/base_default.html' %}
+
+{% block content_default %}
+
+{% with obj.contact_informations.all as informations %}
+{% if informations %}
+<table>
+    <thead>
+        <tr>
+            <th>Type</th>
+            <th>Content</th>
+        </tr>
+    </thead>
+    <tbody>
+        {% for information in informations %}
+        <tr>
+            <td>{{ information.get_information_type_display }}</td>
+            <td>{{ information.content }}</td>
+        </tr>
+        {% endfor %}
+    </tbody>
+</table>
+{% else %}
+<p>No informations for this contact</p>
+{% endif %}
+{% endwith %}
+
+{% endblock %}
