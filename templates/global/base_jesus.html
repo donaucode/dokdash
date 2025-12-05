@@ -1,0 +1,33 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Dokdash{% endblock %}</title>
+    
+        <!-- CUSTOM STYLING -->
+        <link rel="stylesheet" href="{% static 'dc_uiux/css/base.css' %}">
+        <link rel="stylesheet" href="{% static 'dc_uiux/css/forms.css' %}">
+        <link rel="stylesheet" href="{% static 'dc_uiux/css/tables.css' %}">
+        <link rel="stylesheet" href="{% static 'dc_uiux/css/select2.css' %}">
+        <link rel="stylesheet" href="{% static 'dc_uiux/css/spacing.css' %}">
+        <link rel="stylesheet" href="{% static 'dc_uiux/css/utils.css' %}">
+        
+        <!-- EXTRA CSS IF NEEDED IN CHILD TEMPLATE -->
+        {% block extra_css %}{% endblock %}
+    </head>
+    
+    <body>
+    
+        <main>
+            {% block content_jesus %}
+
+            {% endblock %}
+        </main>
+        
+        <!-- EXTRA JS IF NEEDED IN CHILD TEMPLATE -->
+        {% block extra_js %}{% endblock %}
+    
+    </body>
+</html>

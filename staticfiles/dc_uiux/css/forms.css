@@ -1,0 +1,87 @@
+@import url('vars.css');
+
+
+/* label { display: block; font-weight: var(--fw-600); margin-bottom: var(--space-xs); } */
+
+label { display: block; font-weight: var(--fw-600); margin-bottom: var(--space-2xs); }
+
+/* Container which groups multiple field-containers in a row */
+.field-group {
+    width: 100%;
+    display: flex;
+    gap: var(--space-md);
+    margin-bottom: var(--space-xs);
+}
+
+/* Contains label, field, etc. */
+.field-container {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-end;
+}
+
+.field {
+    min-width: 0;
+    width: 100%;
+    box-sizing: border-box;
+    border: 1px solid var(--clr-grey);
+    border-radius: var(--space-2xs);
+    padding: var(--space-2xs);
+    background-color: var(--clr-light);
+    margin: 0 !important;
+}
+
+.help-text {
+    font-size: var(--fs-xs);
+    margin: var(--space-xs) 0 0 0;
+    color: var(--clr-dark);
+}
+
+/* Style the error list (ul) that Django creates */
+.errorlist {
+    list-style-type: none; /* Removes the bullet points */
+    padding: 0;
+    margin: 5px 0 10px 0;
+    color: var(--clr-danger);
+    font-size: 0.9em;
+}
+
+/* Style the container of a field that has an error */
+.field-container.has-error input {
+    border: 2px dashed var(--clr-danger);
+}
+
+/* Style the non-field errors container at the top */
+.form-errors .errorlist {
+    background-color: #f8d7da; /* A light red background */
+    border: 1px solid var(--clr-danger);
+    border-radius: 4px;
+    padding: 10px;
+    margin-bottom: 15px;
+}
+
+input[type="checkbox"] {
+    appearance: none;
+    width: var(--space-sm);
+    height: var(--space-sm);
+    border: 1px solid var(--clr-grey);
+    outline: 1px solid var(--clr-grey);
+
+    border-radius: var(--space-2xs);
+    cursor: pointer;
+    position: relative;
+    background-color: white;
+}
+
+/* Add a checkmark */
+input[type="checkbox"]:checked::after {
+    content: 'X';
+    position: absolute;
+    color: var(--clr-dark);
+    font-size: var(--fs-md);
+    font-weight: var(--fw-800);
+    line-height: 1rem;
+    left: 2px;
+}

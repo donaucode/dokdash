@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+    /* COLORS */
+    --clr-primary: rgba(255, 0, 69, 1);
+    --clr-primary-transparent: rgba(255, 0, 69, 0.1);
+    
+    --clr-accent: rgba(250, 130, 20, 1);
+    --clr-accent-transparent: rgba(250, 130, 20, 0.1);
+    
+    --clr-dark: rgba(23, 23, 23, 1);
+    --clr-dark-transparent: rgba(23, 23, 23, 0.1);
+    
+    --clr-light: rgba(255, 255, 255, 1);
+    --clr-light-transparent: rgba(255, 255, 255, 0.1);
+    
+    --clr-grey: rgba(210, 210, 210, 1);
+    --clr-grey-transparent: rgba(210, 210, 210, 0.1);
+    
+    --clr-warning: rgba(233, 132, 23, 1);
+    --clr-warning-transparent: rgba(233, 132, 23, 0.1);
+    
+    --clr-danger: rgba(240, 18, 18, 1);
+    --clr-danger-transparent: rgba(240, 18, 18, 0.1);
+    
+    --clr-success: rgba(4, 153, 20, 1);
+    --clr-success-transparent: rgba(4, 153, 20, 0.1);
+    
+    /* TYPO */
+    --font-family-primary: "Roboto", sans-serif;
+    --font-family-heading: "Noto Sans", sans-serif;
+    
+    --fs-2xs: 0.6rem;
+    --fs-xs: 0.75rem;
+    --fs-sm: 0.9rem;
+    --fs-md: 1.1rem;
+    --fs-lg: 1.5rem;
+    --fs-xl: 2rem;
+    --fs-2xl: 2.5rem;
+    
+    --fw-200: 200;
+    --fw-400: 400;
+    --fw-600: 600;
+    --fw-700: 700;
+    --fw-800: 800;
+    
+    /* SPACES */
+    --space-2xs: 0.5rem;
+    --space-xs: 1rem;
+    --space-sm: 1.5rem;
+    --space-md: 2rem;
+    --space-lg: 2.5rem;
+    --space-xl: 3rem;
+    --space-2xl: 3.5rem;
+    
+}

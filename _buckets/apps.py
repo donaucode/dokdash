@@ -1,6 +1,6 @@
 from django.apps import AppConfig
 
 
-class DocumentsConfig(AppConfig):
+class BucketsConfig(AppConfig):
     default_auto_field = 'django.db.models.BigAutoField'
-    name = '_documents'
+    name = '_buckets'

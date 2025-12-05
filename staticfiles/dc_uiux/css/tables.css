@@ -1,0 +1,16 @@
+@import url('vars.css');
+
+.table-wrap { overflow-x: auto; }
+    
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid var(--clr-grey);
+}
+
+td, th {
+    border: 1px solid var(--clr-grey);
+    padding: var(--space-xs);
+}
+
+td > p { margin: 0 !important; }

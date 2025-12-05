@@ -1,0 +1,9 @@
+@import url('vars.css');
+
+.select2-container { 
+    width: 100% !important;
+    display: flex !important;
+    flex-direction: column !important;
+}
+
+.select2-selection { border: 1px solid var(--clr-grey) !important; }

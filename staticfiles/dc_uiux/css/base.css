@@ -1,0 +1,95 @@
+@import url('vars.css');
+
+/* for DEBUGGING */
+/*
+* { outline: 1px solid red !important; }
+*/
+
+*, *::before, *::after {
+    box-sizing: border-box !important;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: var(--font-family-primary);
+    font-style: normal;
+    font-optical-sizing: auto;
+    font-size: var(--fs-sm);
+    font-weight: var(--fw-400);
+    color: var(--clr-dark);
+    background-color: var(--clr-light);
+}
+
+input, button, textarea, select { font: inherit; }
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: var(--font-family-heading);
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-weight: var(--fw-700);
+    color: var(--clr-dark);
+    margin: 0;
+    padding: 0;
+  
+    letter-spacing: 1px;
+}
+
+p {
+    margin: 0;
+}
+
+h1 { font-size: var(--fs-xl); }
+h2 { font-size: var(--fs-lg); }
+h3 { font-size: var(--fs-md); }
+h4 { font-size: var(--fs-sm); }
+h5 { font-size: var(--fs-xs); }
+
+a {
+    color: var(--clr-primary);
+    text-decoration: none;
+    font-weight: var(--fw-600);
+    margin: 0;
+}
+
+a:hover {
+    color: var(--clr-primary);
+    text-decoration: underline;
+}
+
+.container { max-width: 1200px; margin-left: auto; margin-right: auto; padding-right: var(--space-sm); padding-left: var(--space-sm); }
+
+.btn {
+    padding: var(--space-xs);
+    border-radius: var(--space-2xs);
+    cursor: pointer;
+    font-weight: var(--fw-600);
+}
+
+.btn-mini {
+    padding: var(--space-2xs);
+    border-radius: var(--space-2xs);
+    cursor: pointer;
+    font-weight: var(--fw-400);
+}
+    
+.btn-primary {
+    color: var(--clr-light);
+    background-color: var(--clr-primary);
+    border: 1px solid var(--clr-primary);
+}
+
+.btn-dark {
+    color: var(--clr-light);
+    background-color: var(--clr-dark);
+    border: 1px solid var(--clr-dark);
+}
+
+.btn-danger {
+    color: var(--clr-light);
+    background-color: var(--clr-danger);
+    border: 1px solid var(--clr-danger);
+}
+
+.btn:hover, .btn-mini:hover { margin-top: -1px; }
+.btn-primary > a, .btn-dark > a, .btn-danger > a { color: var(--clr-light); text-decoration: none; }

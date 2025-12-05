@@ -13,6 +13,8 @@ class Contact(models.Model):
     description = models.TextField(blank=True, null=True)
     birthday = models.DateField(blank=True, null=True)
     
+    tags = models.ManyToManyField("_global.Tag", blank=True, related_name="contacts_tagged")
+    
     def __str__(self):
         return f"{self.name}: {self.description}"
         
