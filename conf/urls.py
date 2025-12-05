@@ -6,6 +6,7 @@ from . import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('accounts/', include('_accounts.urls')),
+    path("select2/", include("django_select2.urls")),
     path('', include('_global.urls')),
     path('contacts/', include('_contacts.urls')),
     path('buckets/', include('_buckets.urls')),
